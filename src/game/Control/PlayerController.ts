@@ -4,10 +4,10 @@ import { Vector2 } from "../../core/math/Vector2.js";
 import { Component } from "../../core/objects/Component.js";
 import { GameObject } from "../../core/objects/GameObject.js";
 import { Box } from "../../core/render/Box.js";
+import { AIController } from "./AIController.js";
 
 export class PlayerController extends Component {
     mousePosition: Vector2;
-
 
     constructor () {
         super();
@@ -23,6 +23,7 @@ export class PlayerController extends Component {
     }
 
     onClick () {
-        
+        let ai = <AIController>this.gameObject.getComponentByTag("ai");
+        ai.moveTo(this.mousePosition);
     }
 }

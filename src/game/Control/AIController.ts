@@ -8,6 +8,7 @@ export class AIController extends Component {
     targetPosition: Vector2;
     wait: number;
     state: _state;
+    walkSpeed: number;
 
     constructor () {
         super();
@@ -15,6 +16,8 @@ export class AIController extends Component {
         this.state = "waiting";
         this.wait = 500;
         this.state = "waiting";
+        this.walkSpeed = 2;
+        this.tag = "ai";
     }
 
     moveTo(location = new Vector2()) {
@@ -27,14 +30,9 @@ export class AIController extends Component {
     }
 
     update (delta = 0) {
-        this.wait -= delta;
-        if (this.wait <= 0) {
-            this.moveTo(Vector2.randomInRange(0, RIM_WORLD.canvas.width, 0, RIM_WORLD.canvas.height));
-            this.wait = 2000;
-        }
         if (this.state == "moving") {
             this.gameObject.setPosition(
-                this.gameObject.getPosition().add(Vector2.clamp(this.targetPosition.sub(this.gameObject.getPosition()), -5, 5))
+                this.gameObject.getPosition().add(Vector2.clamp(this.targetPosition.sub(this.gameObject.getPosition()), -this.walkSpeed, this.walkSpeed))
             );
         }
         if (Vector2.equal(this.gameObject.getPosition(), this.targetPosition)) {

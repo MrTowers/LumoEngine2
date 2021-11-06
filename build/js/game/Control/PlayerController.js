@@ -13,5 +13,7 @@ export class PlayerController extends Component {
         });
     }
     onClick() {
+        let ai = this.gameObject.getComponentByTag("ai");
+        ai.moveTo(this.mousePosition);
     }
 }
