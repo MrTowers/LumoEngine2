@@ -16,6 +16,16 @@ export class Vector2 {
     mul(v) {
         return new Vector2(this.x * v.x, this.y * v.y);
     }
+    length() {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+    normalize() {
+        let length = this.length();
+        if (length == 0) {
+            return new Vector2(0, 0);
+        }
+        return new Vector2(this.x / length, this.y / length);
+    }
     static clamp(input, min = 0, max = 0) {
         let x = input.x;
         let y = input.y;

@@ -9,6 +9,8 @@ export class Engine {
         this.ctx.imageSmoothingEnabled = false;
         this.objects = [];
         this.textures = {};
+        this.sounds = {};
+        this.paused = false;
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -17,8 +19,10 @@ export class Engine {
         }
     }
     update(delta = 0) {
-        for (let i in this.objects) {
-            this.objects[i].update(delta);
+        if (!this.paused) {
+            for (let i in this.objects) {
+                this.objects[i].update(delta);
+            }
         }
     }
 }
