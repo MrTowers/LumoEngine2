@@ -1,5 +1,4 @@
 import { Component } from "../objects/Component.js";
-import { GameObject } from "../objects/GameObject.js";
 
 export class Sprite extends Component {
     image: HTMLImageElement;
@@ -16,7 +15,7 @@ export class Sprite extends Component {
     render (ctx: CanvasRenderingContext2D) {
         if (this.image.width > 0 && this.image.height > 0) {
             let pos = this.gameObject.getPosition();
-            ctx.drawImage(this.image, pos.x, pos.y);
+            ctx.drawImage(this.image, pos.x, pos.y, this.sizeX, this.sizeY);
         }
     }
 }

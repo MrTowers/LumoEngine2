@@ -4,6 +4,7 @@ export class Engine {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
     objects: GameObject[];
+    textures: any;
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -12,7 +13,9 @@ export class Engine {
         document.body.appendChild(this.canvas);
         this.canvas.style.backgroundColor = "black";
         this.ctx = this.canvas.getContext("2d")!;
+        this.ctx.imageSmoothingEnabled = false;
         this.objects = [];
+        this.textures = {};
     }
 
     render () {

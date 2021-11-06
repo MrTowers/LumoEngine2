@@ -6,7 +6,9 @@ export class Engine {
         document.body.appendChild(this.canvas);
         this.canvas.style.backgroundColor = "black";
         this.ctx = this.canvas.getContext("2d");
+        this.ctx.imageSmoothingEnabled = false;
         this.objects = [];
+        this.textures = {};
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
