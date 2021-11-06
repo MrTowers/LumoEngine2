@@ -14,6 +14,7 @@ export class GameObject {
     addComponent (component: Component) : void {
         component.gameObject = this;
         this.components.push(component);
+        component.onattach();
     }
 
     removeComponentById (id: number) : void {

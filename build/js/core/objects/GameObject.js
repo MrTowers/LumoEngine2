@@ -9,6 +9,7 @@ export class GameObject {
     addComponent(component) {
         component.gameObject = this;
         this.components.push(component);
+        component.onattach();
     }
     removeComponentById(id) {
         this.components.splice(id, 1);

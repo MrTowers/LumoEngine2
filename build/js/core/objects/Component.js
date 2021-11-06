@@ -6,4 +6,6 @@ export class Component {
     }
     render(ctx, canvas) {
     }
+    onattach() {
+    }
 }

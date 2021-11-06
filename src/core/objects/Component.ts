@@ -15,4 +15,8 @@ export class Component {
     render (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
         
     }
+
+    onattach () {
+        
+    }
 }

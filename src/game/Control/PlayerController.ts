@@ -26,4 +26,9 @@ export class PlayerController extends Component {
         let ai = <AIController>this.gameObject.getComponentByTag("ai");
         ai.moveTo(this.mousePosition);
     }
+
+    onattach() {
+        let ai = <AIController>this.gameObject.getComponentByTag("ai");
+        ai.controlled = true;
+    }
 }

@@ -9,6 +9,5 @@ export class Entity extends GameObject {
         super();
         this.addComponent(new AIController());
         this.addComponent(new Box(20, 20, new Color(0, 255, 0, 1)));
-        this.addComponent(new PlayerController());
     }
 }

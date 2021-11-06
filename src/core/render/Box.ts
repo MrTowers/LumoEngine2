@@ -11,6 +11,7 @@ export class Box extends Component {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.color = color;
+        this.tag = "box";
     }
 
     render (ctx: CanvasRenderingContext2D) {
