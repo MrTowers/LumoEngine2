@@ -25,6 +25,20 @@ export class Vector2 {
         return new Vector2(this.x * v.x, this.y * v.y);
     }
 
+    length () : number {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+
+    normalize () : Vector2 {
+        let length = this.length();
+
+        if (length == 0) {
+            return new Vector2(0, 0);
+        }
+
+        return new Vector2(this.x / length, this.y / length);
+    }
+
     static clamp (input: Vector2, min = 0, max = 0) : Vector2 {
         let x = input.x;
         let y = input.y;

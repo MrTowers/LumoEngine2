@@ -6,4 +6,9 @@ export class Load {
         x.src = src;
         RIM_WORLD.textures[name] = x;
     }
+
+    static sound (src = "", name = "") {
+        let x = new Audio(src);
+        RIM_WORLD.sounds[name] = x;
+    }
 }

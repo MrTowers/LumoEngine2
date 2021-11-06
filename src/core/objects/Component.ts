@@ -19,4 +19,8 @@ export class Component {
     onattach () {
         
     }
+
+    destroy () {
+        this.gameObject.components.splice(this.gameObject.components.indexOf(this), 1);
+    }
 }

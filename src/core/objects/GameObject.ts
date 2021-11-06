@@ -1,3 +1,4 @@
+import { RIM_WORLD } from "../../RimWorld.js";
 import { Transform } from "../math/Transform.js";
 import { Vector2 } from "../math/Vector2.js";
 import { Component } from "./Component.js";
@@ -54,5 +55,9 @@ export class GameObject {
         for (let i in this.components) {
             this.components[i].update(delta);
         }
+    }
+
+    destroy () {
+        RIM_WORLD.objects.splice(RIM_WORLD.objects.indexOf(this), 1);
     }
 }

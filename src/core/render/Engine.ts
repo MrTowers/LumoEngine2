@@ -5,6 +5,8 @@ export class Engine {
     ctx: CanvasRenderingContext2D;
     objects: GameObject[];
     textures: any;
+    paused: boolean;
+    sounds: any;
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -16,6 +18,8 @@ export class Engine {
         this.ctx.imageSmoothingEnabled = false;
         this.objects = [];
         this.textures = {};
+        this.sounds = {};
+        this.paused = false;
     }
 
     render () {
@@ -26,8 +30,10 @@ export class Engine {
     }
 
     update (delta = 0) {
-        for (let i in this.objects) {
-            this.objects[i].update(delta);
+        if (!this.paused) {
+            for (let i in this.objects) {
+                this.objects[i].update(delta);
+            }
         }
     }
 }
