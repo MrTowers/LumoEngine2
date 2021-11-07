@@ -1,3 +1,7 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
 export class Engine {
     constructor() {
         this.canvas = document.createElement("canvas");

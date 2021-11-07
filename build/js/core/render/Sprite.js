@@ -1,3 +1,7 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
 import { Component } from "../objects/Component.js";
 export class Sprite extends Component {
     constructor(image = new Image()) {
