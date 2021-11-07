@@ -1,7 +1,7 @@
 import { Engine } from "./core/render/Engine.js";
 import { main } from "./game/Main.js";
 
-export const RIM_WORLD = new Engine();
+export const LUMO_ENGINE2 = new Engine();
 
 let lastTime = 0;
 let now = performance.now();
@@ -11,8 +11,8 @@ function tick () {
     now = performance.now();
     delta = now - lastTime;
     lastTime = now;
-    RIM_WORLD.update(delta);
-    RIM_WORLD.render();
+    LUMO_ENGINE2.update(delta);
+    LUMO_ENGINE2.render();
     requestAnimationFrame(tick);
 }
 

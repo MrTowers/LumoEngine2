@@ -1,8 +1,8 @@
-import { RIM_WORLD } from "../RimWorld.js";
+import { LUMO_ENGINE2 } from "../LumoEngine2.js";
 import { GameObject } from "./objects/GameObject.js";
 
 export function spawnGameObject (gameObject: GameObject) {
-    RIM_WORLD.objects.push(gameObject);
+    LUMO_ENGINE2.objects.push(gameObject);
 }
 
 export function rand (min = 0, max = 0) : number {
@@ -14,7 +14,7 @@ export function clamp (input = 0, min = 0, max = 0) : number {
 }
 
 export function setPaused (paused = true) {
-    RIM_WORLD.paused = paused;
+    LUMO_ENGINE2.paused = paused;
 }
 
 export function smoothFloat (input = 0, target = 0, speed = 0.1) {
@@ -22,5 +22,5 @@ export function smoothFloat (input = 0, target = 0, speed = 0.1) {
 }
 
 export function playSound (sound: string) {
-    RIM_WORLD.sounds[sound].play();
+    LUMO_ENGINE2.sounds[sound].play();
 }

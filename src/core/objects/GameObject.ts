@@ -1,4 +1,4 @@
-import { RIM_WORLD } from "../../RimWorld.js";
+import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { Transform } from "../math/Transform.js";
 import { Vector2 } from "../math/Vector2.js";
 import { Component } from "./Component.js";
@@ -58,6 +58,6 @@ export class GameObject {
     }
 
     destroy () {
-        RIM_WORLD.objects.splice(RIM_WORLD.objects.indexOf(this), 1);
+        LUMO_ENGINE2.objects.splice(LUMO_ENGINE2.objects.indexOf(this), 1);
     }
 }
