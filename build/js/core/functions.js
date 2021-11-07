@@ -5,6 +5,7 @@
 import { LUMO_ENGINE2 } from "../LumoEngine2.js";
 export function spawnGameObject(gameObject) {
     LUMO_ENGINE2.objects.push(gameObject);
+    gameObject.start();
 }
 export function rand(min = 0, max = 0) {
     return Math.floor(Math.random() * (max - min + 1) + min);

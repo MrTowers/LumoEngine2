@@ -22,8 +22,8 @@ export class Component {
         
     }
 
-    onattach () {
-        
+    start () {
+
     }
 
     destroy () {

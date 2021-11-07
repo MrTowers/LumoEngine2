@@ -14,7 +14,6 @@ export class GameObject {
     addComponent(component) {
         component.gameObject = this;
         this.components.push(component);
-        component.onattach();
     }
     removeComponentById(id) {
         this.components.splice(id, 1);
@@ -49,5 +48,10 @@ export class GameObject {
     }
     destroy() {
         LUMO_ENGINE2.objects.splice(LUMO_ENGINE2.objects.indexOf(this), 1);
+    }
+    start() {
+        for (let i in this.components) {
+            this.components[i].start();
+        }
     }
 }

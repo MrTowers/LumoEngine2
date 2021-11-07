@@ -10,7 +10,7 @@ export class Component {
     }
     render(ctx, canvas) {
     }
-    onattach() {
+    start() {
     }
     destroy() {
         this.gameObject.components.splice(this.gameObject.components.indexOf(this), 1);
