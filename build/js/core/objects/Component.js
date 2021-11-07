@@ -1,3 +1,7 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
 export class Component {
     constructor() {
         this.tag = "untagged";
