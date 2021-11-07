@@ -1,3 +1,9 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
+
 import { Color } from "../math/Color.js";
 import { Component } from "../objects/Component.js";
 

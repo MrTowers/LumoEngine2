@@ -1,3 +1,8 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
 import { GameObject } from "../objects/GameObject.js";
 
 export class Engine {
