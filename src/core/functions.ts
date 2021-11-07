@@ -1,3 +1,9 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
+
 import { LUMO_ENGINE2 } from "../LumoEngine2.js";
 import { GameObject } from "./objects/GameObject.js";
 

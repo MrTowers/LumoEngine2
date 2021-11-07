@@ -1,3 +1,9 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
+
 import { Vector2 } from "./Vector2.js";
 
 export class Transform {

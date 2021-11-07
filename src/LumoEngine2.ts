@@ -1,3 +1,9 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
+
 import { Engine } from "./core/render/Engine.js";
 import { main } from "./game/Main.js";
 
