@@ -3,8 +3,8 @@
  * www.github/MrTowers
  */
 
-
-import { clamp, rand } from "../functions.js";
+import { clamp } from "../functions/clamp.js";
+import { rand } from "../functions/rand.js";
 
 export class Vector2 {
     x: number;
