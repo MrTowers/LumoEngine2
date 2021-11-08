@@ -2,7 +2,8 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
-import { clamp, rand } from "../functions.js";
+import { clamp } from "../functions/clamp.js";
+import { rand } from "../functions/rand.js";
 export class Vector2 {
     constructor(x = 0, y = 0) {
         this.x = x;
