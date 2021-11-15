@@ -3,6 +3,7 @@
  * www.github/MrTowers
  */
 
+import { Load } from "../Load.js";
 import { GameObject } from "../objects/GameObject.js";
 import { Camera } from "./Camera.js";
 

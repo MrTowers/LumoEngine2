@@ -4,6 +4,7 @@
  */
 
 
+import { postinit } from "./core/postinit.js";
 import { Engine } from "./core/render/Engine.js";
 import { main } from "./game/Main.js";
 
@@ -24,4 +25,5 @@ function tick () {
 }
 
 tick();
+postinit();
 main();

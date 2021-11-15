@@ -11,6 +11,7 @@ export class Sprite extends Component {
     sizeX: number;
     sizeY: number;
     alpha: number;
+    light: number;
 
     constructor (image = new Image()) {
         super();
@@ -18,6 +19,7 @@ export class Sprite extends Component {
         this.sizeX = 20;
         this.sizeY = 20;
         this.alpha = 1;
+        this.light = 0;
     }
 
     render (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
@@ -27,6 +29,10 @@ export class Sprite extends Component {
             ctx.save();
             ctx.globalAlpha = this.alpha;
             ctx.drawImage(this.image, pos.x - cam.x + (canvas.width / 2) - (this.sizeX / 2), pos.y - cam.y + (canvas.height / 2) - (this.sizeY / 2), this.sizeX, this.sizeY);
+            if (this.light > 0) { 
+                ctx.globalAlpha = this.light;
+                ctx.drawImage(LUMO_ENGINE2.textures["LUMO_light"], pos.x - cam.x + (canvas.width / 2) - (this.sizeX), pos.y - cam.y + (canvas.height / 2) - (this.sizeY), this.sizeX * 2, this.sizeY * 2);
+            }
             ctx.restore();
         }
     }

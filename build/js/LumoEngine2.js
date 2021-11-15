@@ -2,6 +2,7 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
+import { postinit } from "./core/postinit.js";
 import { Engine } from "./core/render/Engine.js";
 import { main } from "./game/Main.js";
 export const LUMO_ENGINE2 = new Engine();
@@ -17,4 +18,5 @@ function tick() {
     requestAnimationFrame(tick);
 }
 tick();
+postinit();
 main();
