@@ -4,6 +4,7 @@
  */
 
 import { GameObject } from "../objects/GameObject.js";
+import { Camera } from "./Camera.js";
 
 export class Engine {
     canvas: HTMLCanvasElement;
@@ -12,6 +13,7 @@ export class Engine {
     textures: any;
     paused: boolean;
     sounds: any;
+    camera: Camera;
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -28,6 +30,7 @@ export class Engine {
         document.addEventListener("contextmenu", (e) => {
             e.preventDefault();
         });
+        this.camera = new Camera();
     }
 
     render () {

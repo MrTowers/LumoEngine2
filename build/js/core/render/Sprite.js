@@ -2,6 +2,7 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
+import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { Component } from "../objects/Component.js";
 export class Sprite extends Component {
     constructor(image = new Image()) {
@@ -11,12 +12,13 @@ export class Sprite extends Component {
         this.sizeY = 20;
         this.alpha = 1;
     }
-    render(ctx) {
+    render(ctx, canvas) {
         if (this.image.width > 0 && this.image.height > 0) {
             let pos = this.gameObject.getPosition();
+            let cam = LUMO_ENGINE2.camera.getCalculatedPosition();
             ctx.save();
             ctx.globalAlpha = this.alpha;
-            ctx.drawImage(this.image, pos.x, pos.y, this.sizeX, this.sizeY);
+            ctx.drawImage(this.image, pos.x - cam.x + (canvas.width / 2) - (this.sizeX / 2), pos.y - cam.y + (canvas.height / 2) - (this.sizeY / 2), this.sizeX, this.sizeY);
             ctx.restore();
         }
     }

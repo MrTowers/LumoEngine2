@@ -2,6 +2,7 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
+import { Camera } from "./Camera.js";
 export class Engine {
     constructor() {
         this.canvas = document.createElement("canvas");
@@ -18,6 +19,7 @@ export class Engine {
         document.addEventListener("contextmenu", (e) => {
             e.preventDefault();
         });
+        this.camera = new Camera();
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
