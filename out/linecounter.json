@@ -1,0 +1,297 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "c:\\Users\\dawid\\Desktop\\Folder Dejwa\\repo\\RimWorldInJs",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-11-09 23:16:39",
+            "filesum": 42,
+            "codesum": 690,
+            "commentsum": 169,
+            "blanksum": 100,
+            "statistics": {
+                ".json": {
+                    "code": 11,
+                    "comment": 81,
+                    "blank": 8
+                },
+                ".ts": {
+                    "code": 349,
+                    "comment": 44,
+                    "blank": 92
+                },
+                ".js": {
+                    "code": 313,
+                    "comment": 44,
+                    "blank": 0
+                },
+                ".css": {
+                    "code": 4,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".html": {
+                    "code": 13,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "build\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\clamp.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\DoOnce.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\playSound.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\rand.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\setPaused.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\smoothFloat.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\functions\\spawnGameObject.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 12,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\Load.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 35,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Color.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 22,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Transform.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 45,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Vector2.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\Component.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 53,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\GameObject.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Box.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 28,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Engine.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Sprite.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Tilemap.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "build\\js\\game\\Main.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 16,
+                    "comment": 4,
+                    "filename": "build\\js\\LumoEngine2.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "build\\style.css"
+                },
+                {
+                    "filename": "README.md",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\clamp.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\DoOnce.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\playSound.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\rand.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\setPaused.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\smoothFloat.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "src\\core\\functions\\spawnGameObject.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 4,
+                    "filename": "src\\core\\Load.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 31,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Color.ts"
+                },
+                {
+                    "blank": 9,
+                    "code": 24,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Transform.ts"
+                },
+                {
+                    "blank": 15,
+                    "code": 47,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Vector2.ts"
+                },
+                {
+                    "blank": 11,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\Component.ts"
+                },
+                {
+                    "blank": 15,
+                    "code": 55,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\GameObject.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Box.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 35,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Engine.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 18,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Sprite.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 32,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Tilemap.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "src\\game\\Main.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 16,
+                    "comment": 4,
+                    "filename": "src\\LumoEngine2.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 11,
+                    "comment": 81,
+                    "filename": "tsconfig.json"
+                }
+            ]
+        }
+    ]
+}

@@ -15,6 +15,8 @@ export class Load {
 
     static sound (src = "", name = "") {
         let x = new Audio(`../src/game/${src}`);
+        x.preload = 'auto';
+        x.load();
         LUMO_ENGINE2.sounds[name] = x;
     }
 }
