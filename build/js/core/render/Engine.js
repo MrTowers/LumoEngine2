@@ -6,8 +6,10 @@ import { Camera } from "./Camera.js";
 export class Engine {
     constructor() {
         this.canvas = document.createElement("canvas");
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        window.addEventListener("resize", (e) => {
+            this.resize();
+        });
+        this.resize();
         document.body.appendChild(this.canvas);
         this.canvas.style.backgroundColor = "black";
         this.ctx = this.canvas.getContext("2d");
@@ -33,5 +35,9 @@ export class Engine {
                 this.objects[i].update(delta);
             }
         }
+    }
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
     }
 }

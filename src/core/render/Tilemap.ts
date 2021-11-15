@@ -3,6 +3,7 @@
  * www.github/MrTowers
  */
 
+import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { Component } from "../objects/Component.js";
 
 export class Tilemap extends Component {
@@ -21,9 +22,10 @@ export class Tilemap extends Component {
         this.oneTileSize = 16;
     }
 
-    render (ctx: CanvasRenderingContext2D) {
+    render (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
         if (this.image.width > 0 && this.image.height > 0) {
             let pos = this.gameObject.getPosition();
+            let cam = LUMO_ENGINE2.camera.getCalculatedPosition();
             ctx.save();
             ctx.drawImage(
                 this.image,
@@ -31,8 +33,8 @@ export class Tilemap extends Component {
                 0,
                 this.oneTileSize,
                 this.oneTileSize,
-                pos.x,
-                pos.y,
+                pos.x - cam.x + (canvas.width / 2) - (this.sizeX / 2),
+                pos.y - cam.y + (canvas.height / 2) - (this.sizeY / 2),
                 this.sizeX,
                 this.sizeY
             );
