@@ -2,9 +2,9 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
-import { between } from "../functions/between.js";
-import { clamp } from "../functions/clamp.js";
-import { rand } from "../functions/rand.js";
+import { between } from "../functions/math/between.js";
+import { clamp } from "../functions/math/clamp.js";
+import { rand } from "../functions/math/rand.js";
 export class Vector2 {
     constructor(x = 0, y = 0) {
         this.x = x;
@@ -31,6 +31,9 @@ export class Vector2 {
             return new Vector2(0, 0);
         }
         return new Vector2(this.x / length, this.y / length);
+    }
+    clone() {
+        return new Vector2(this.x, this.y);
     }
     static between(input, min, max) {
         if (between(input.x, min.x, max.x)) {

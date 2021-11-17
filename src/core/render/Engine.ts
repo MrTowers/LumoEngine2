@@ -5,12 +5,14 @@
 
 import { Load } from "../Load.js";
 import { GameObject } from "../objects/GameObject.js";
+import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
 
 export class Engine {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
-    objects: GameObject[];
+    scene: Scene;
+    scenes: any;
     textures: any;
     paused: boolean;
     sounds: any;
@@ -26,7 +28,8 @@ export class Engine {
         this.canvas.style.backgroundColor = "black";
         this.ctx = this.canvas.getContext("2d")!;
         this.ctx.imageSmoothingEnabled = false;
-        this.objects = [];
+        this.scene = new Scene();
+        this.scenes = {};
         this.textures = {};
         this.sounds = {};
         this.paused = false;
@@ -38,16 +41,12 @@ export class Engine {
 
     render () {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        for (let i in this.objects) {
-            this.objects[i].render(this.ctx, this.canvas);
-        }
+        this.scene.render(this.ctx, this.canvas);
     }
 
     update (delta = 0) {
         if (!this.paused) {
-            for (let i in this.objects) {
-                this.objects[i].update(delta);
-            }
+            this.scene.update(delta);
         }
     }
 

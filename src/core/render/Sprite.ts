@@ -13,9 +13,9 @@ export class Sprite extends Component {
     alpha: number;
     light: number;
 
-    constructor (image = new Image()) {
+    constructor (imageSrc = "") {
         super();
-        this.image = image;
+        this.image = LUMO_ENGINE2.textures[imageSrc];
         this.sizeX = 20;
         this.sizeY = 20;
         this.alpha = 1;

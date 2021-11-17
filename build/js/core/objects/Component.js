@@ -15,4 +15,7 @@ export class Component {
     destroy() {
         this.gameObject.components.splice(this.gameObject.components.indexOf(this), 1);
     }
+    clone() {
+        return new Component();
+    }
 }

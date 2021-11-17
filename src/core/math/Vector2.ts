@@ -3,9 +3,9 @@
  * www.github/MrTowers
  */
 
-import { between } from "../functions/between.js";
-import { clamp } from "../functions/clamp.js";
-import { rand } from "../functions/rand.js";
+import { between } from "../functions/math/between.js";
+import { clamp } from "../functions/math/clamp.js";
+import { rand } from "../functions/math/rand.js";
 
 export class Vector2 {
     x: number;
@@ -44,6 +44,10 @@ export class Vector2 {
         }
 
         return new Vector2(this.x / length, this.y / length);
+    }
+
+    clone () : Vector2 {
+        return new Vector2(this.x, this.y);
     }
 
     static between (input: Vector2, min: Vector2, max: Vector2) : boolean {

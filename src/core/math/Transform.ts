@@ -36,4 +36,8 @@ export class Transform {
     toString () : string {
         return `Transform: { position: ${this.position.toString()}, scale: ${this.scale.toString()} }`;
     }
+
+    clone () : Transform {
+        return new Transform(this.position.clone(), this.scale.clone(), this.rotation);
+    }
 }

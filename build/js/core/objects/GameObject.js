@@ -53,11 +53,18 @@ export class GameObject {
         }
     }
     destroy() {
-        LUMO_ENGINE2.objects.splice(LUMO_ENGINE2.objects.indexOf(this), 1);
+        LUMO_ENGINE2.scene.objects.splice(LUMO_ENGINE2.scene.objects.indexOf(this), 1);
     }
     start() {
         for (let i in this.components) {
             this.components[i].start();
         }
+    }
+    clone() {
+        let go = new GameObject();
+        for (let i in this.components) {
+            go.components.push(this.components[i].clone());
+        }
+        return go;
     }
 }

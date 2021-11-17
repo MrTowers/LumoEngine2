@@ -36,4 +36,7 @@ export class Color {
     toString() {
         return `rgba(${this.r * 255}, ${this.g * 255}, ${this.b * 255}, ${this.a})`;
     }
+    clone() {
+        return new Color(this.r, this.g, this.b, this.a);
+    }
 }

@@ -5,9 +5,9 @@
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { Component } from "../objects/Component.js";
 export class Sprite extends Component {
-    constructor(image = new Image()) {
+    constructor(imageSrc = "") {
         super();
-        this.image = image;
+        this.image = LUMO_ENGINE2.textures[imageSrc];
         this.sizeX = 20;
         this.sizeY = 20;
         this.alpha = 1;

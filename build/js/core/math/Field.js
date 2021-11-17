@@ -12,4 +12,7 @@ export class Field {
         }
         return false;
     }
+    clone() {
+        return new Field(this.beginVector.x, this.beginVector.y, this.endVector.x, this.endVector.y);
+    }
 }
