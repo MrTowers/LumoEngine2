@@ -60,11 +60,4 @@ export class GameObject {
             this.components[i].start();
         }
     }
-    clone() {
-        let go = new GameObject();
-        for (let i in this.components) {
-            go.components.push(this.components[i].clone());
-        }
-        return go;
-    }
 }
