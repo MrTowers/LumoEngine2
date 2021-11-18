@@ -46,6 +46,13 @@ export class Vector2 {
         return new Vector2(this.x / length, this.y / length);
     }
 
+    distance (v: Vector2) : number {
+        let x = this.x - v.x;
+        let y = this.y - v.y;
+
+        return Math.sqrt(x * x + y * y);
+    }
+
     clone () : Vector2 {
         return new Vector2(this.x, this.y);
     }
