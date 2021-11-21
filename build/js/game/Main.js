@@ -13,14 +13,18 @@ export function main() {
         let go = new GameObject();
         let ac = new AudioCue(as.audio);
         go.addComponent(ac);
-        go.addComponent(new Sprite("test"));
+        let s = new Sprite("test");
+        s.sizeX = 100;
+        s.sizeY = 100;
+        go.addComponent(s);
         ac.positionVolume = true;
         ac.positionStereo = true;
-        ac.play();
+        //ac.play();
         spawnGameObject(go);
         let dir = 1;
         setInterval(() => {
             go.setPosition(go.getPosition().add(new Vector2(dir, 0)));
+            s.light += 0.01;
         }, 10);
         setTimeout(() => {
             dir = -1;
