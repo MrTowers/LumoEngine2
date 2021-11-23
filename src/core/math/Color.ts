@@ -40,6 +40,15 @@ export class Color {
         return `rgba(${this.r * 255}, ${this.g * 255}, ${this.b * 255}, ${this.a})`;
     }
 
+    blend (color: Color, amount: number) : Color {
+        return new Color(
+            this.r * (1 - amount) + color.r * amount,
+            this.g * (1 - amount) + color.g * amount,
+            this.b * (1 - amount) + color.b * amount,
+            this.a * (1 - amount) + color.a * amount
+        );
+    }
+
     clone () : Color {
         return new Color(this.r, this.g, this.b, this.a);
     }
