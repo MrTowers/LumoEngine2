@@ -24,14 +24,21 @@ export class Engine {
             e.preventDefault();
         });
         this.camera = new Camera();
+        this.particles = [];
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.scene.render(this.ctx, this.canvas);
+        for (let i in this.particles) {
+            this.particles[i].render(this.ctx, this.canvas);
+        }
     }
     update(delta = 0) {
         if (!this.paused) {
             this.scene.update(delta);
+            for (let i in this.particles) {
+                this.particles[i].update(delta);
+            }
         }
     }
     resize() {

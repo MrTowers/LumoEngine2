@@ -7,12 +7,14 @@ import { Load } from "../Load.js";
 import { GameObject } from "../objects/GameObject.js";
 import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
+import { Particle } from "./particleSystem/Particle.js";
 
 export class Engine {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
     scene: Scene;
     scenes: any;
+    particles: Particle[];
     textures: any;
     paused: boolean;
     sounds: any;
@@ -37,16 +39,24 @@ export class Engine {
             e.preventDefault();
         });
         this.camera = new Camera();
+        this.particles = [];
     }
 
     render () {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.scene.render(this.ctx, this.canvas);
+
+        for (let i in this.particles) {
+            this.particles[i].render(this.ctx, this.canvas);
+        }
     }
 
     update (delta = 0) {
         if (!this.paused) {
             this.scene.update(delta);
+            for (let i in this.particles) {
+                this.particles[i].update(delta);
+            }
         }
     }
 
