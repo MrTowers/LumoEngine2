@@ -40,6 +40,18 @@ export class Vector2 {
     clone() {
         return new Vector2(this.x, this.y);
     }
+    addByNumber(n) {
+        return new Vector2(this.x + n, this.y + n);
+    }
+    subByNumber(n) {
+        return new Vector2(this.x - n, this.y - n);
+    }
+    divByNumber(n) {
+        return new Vector2(this.x / n, this.y / n);
+    }
+    mulByNumber(n) {
+        return new Vector2(this.x * n, this.y * n);
+    }
     static between(input, min, max) {
         if (between(input.x, min.x, max.x)) {
             if (between(input.y, min.y, max.y)) {

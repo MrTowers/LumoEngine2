@@ -27,4 +27,8 @@ export class Sprite extends Component {
             ctx.restore();
         }
     }
+    setSize(value) {
+        this.sizeX = value;
+        this.sizeY = value;
+    }
 }

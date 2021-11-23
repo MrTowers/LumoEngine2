@@ -57,6 +57,22 @@ export class Vector2 {
         return new Vector2(this.x, this.y);
     }
 
+    addByNumber (n: number) : Vector2 {
+        return new Vector2(this.x + n, this.y + n);
+    }
+
+    subByNumber (n: number) : Vector2 {
+        return new Vector2(this.x - n, this.y - n);
+    }
+
+    divByNumber (n: number) : Vector2 {
+        return new Vector2(this.x / n, this.y / n);
+    }
+
+    mulByNumber (n: number) : Vector2 {
+        return new Vector2(this.x * n, this.y * n);
+    }
+
     static between (input: Vector2, min: Vector2, max: Vector2) : boolean {
         if (between(input.x, min.x, max.x)) {
             if (between(input.y, min.y, max.y)) {

@@ -4,7 +4,6 @@
  */
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { Transform } from "../math/Transform.js";
-import { Vector2 } from "../math/Vector2.js";
 import { Component } from "./Component.js";
 export class GameObject {
     constructor(transform = new Transform()) {
@@ -33,7 +32,7 @@ export class GameObject {
     getPosition() {
         return this.transform.position;
     }
-    setPosition(location = new Vector2()) {
+    setPosition(location) {
         this.transform.position = location;
     }
     getRotation() {

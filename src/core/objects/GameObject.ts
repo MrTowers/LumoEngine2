@@ -46,7 +46,7 @@ export class GameObject {
         return this.transform.position;
     }
 
-    setPosition (location = new Vector2()) {
+    setPosition (location: Vector2) {
         this.transform.position = location;
     }
 

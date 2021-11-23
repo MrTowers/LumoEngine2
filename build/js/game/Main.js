@@ -1,36 +1,14 @@
-import { AudioCue } from "../core/audio/AudioCue.js";
-import { AudioSource } from "../core/audio/AudioSource.js";
-import { DoOnce } from "../core/functions/DoOnce.js";
 import { spawnGameObject } from "../core/functions/spawnGameObject.js";
-import { Load } from "../core/Load.js";
-import { Vector2 } from "../core/math/Vector2.js";
 import { GameObject } from "../core/objects/GameObject.js";
 import { Sprite } from "../core/render/Sprite.js";
+import { CameraController } from "./CameraController.js";
 export function main() {
-    let dxo = new DoOnce(() => {
-        let as = new AudioSource("./to ja.mp3");
-        Load.texture("./4.png", "test");
-        let go = new GameObject();
-        let ac = new AudioCue(as.audio);
-        go.addComponent(ac);
-        let s = new Sprite("test");
-        s.sizeX = 100;
-        s.sizeY = 100;
-        go.addComponent(s);
-        ac.positionVolume = true;
-        ac.positionStereo = true;
-        //ac.play();
-        spawnGameObject(go);
-        let dir = 1;
-        setInterval(() => {
-            go.setPosition(go.getPosition().add(new Vector2(dir, 0)));
-            s.light += 0.01;
-        }, 10);
-        setTimeout(() => {
-            dir = -1;
-        }, 10000);
-    });
-    document.addEventListener("keydown", () => {
-        dxo.run();
-    });
+    let player = new GameObject();
+    player.addComponent(new CameraController());
+    spawnGameObject(player);
+    let sprite = new GameObject();
+    let sp = new Sprite("LUMO_light");
+    sp.setSize(100);
+    sprite.addComponent(sp);
+    spawnGameObject(sprite);
 }
