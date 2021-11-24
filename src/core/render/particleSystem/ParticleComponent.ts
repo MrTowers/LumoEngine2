@@ -14,4 +14,8 @@ export class ParticleComponent {
         let p = new ParticleComponent(particle);
         return p;
     }
+
+    init () {
+        
+    }
 }

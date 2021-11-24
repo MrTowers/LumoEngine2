@@ -25,10 +25,12 @@ export class Particle {
     render(ctx, canvas) {
         let x = this.transform.position.x + canvas.width / 2 - LUMO_ENGINE2.camera.position.x - this.image.width * this.transform.scale.x / 2;
         let y = this.transform.position.y + canvas.height / 2 - LUMO_ENGINE2.camera.position.y - this.image.height * this.transform.scale.y / 2;
-        ctx.save();
-        ctx.globalAlpha = this.alpha;
-        ctx.drawImage(this.image, x, y, this.transform.scale.x * this.image.width, this.transform.scale.y * this.image.height);
-        ctx.restore();
+        if (x > 0 && x < canvas.width && y > 0 && y < canvas.height) {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.drawImage(this.image, x, y, this.transform.scale.x * this.image.width, this.transform.scale.y * this.image.height);
+            ctx.restore();
+        }
     }
     spawn(position) {
         this.transform.position = position;
@@ -46,8 +48,14 @@ export class Particle {
         p.alpha = this.alpha;
         p.transform = this.transform.clone();
         for (let i in this.components) {
-            p.components.push(this.components[i].clone(p));
+            let c = this.components[i].clone(p);
+            p.components.push(c);
         }
         return p;
+    }
+    init() {
+        for (let i in this.components) {
+            this.components[i].init();
+        }
     }
 }

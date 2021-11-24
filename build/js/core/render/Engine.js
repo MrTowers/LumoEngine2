@@ -2,6 +2,7 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
+import { LUMO_settings } from "../LUMO_settings.js";
 import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
 export class Engine {
@@ -39,6 +40,9 @@ export class Engine {
             for (let i in this.particles) {
                 this.particles[i].update(delta);
             }
+        }
+        if (LUMO_settings.debug) {
+            this.ctx.fillText(`FPS: ${1 / delta}`, 5, 5);
         }
     }
     resize() {

@@ -6,4 +6,7 @@ export class PA_AlphaOverLife extends ParticleComponent {
     update() {
         this.particle.alpha = this.particle.life / this.particle.startlife;
     }
+    clone(particle) {
+        return new PA_AlphaOverLife(particle);
+    }
 }

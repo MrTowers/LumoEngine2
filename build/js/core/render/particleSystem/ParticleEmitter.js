@@ -20,6 +20,7 @@ export class ParticleEmitter {
         for (let i = 0; i < this.amount; i++) {
             let p = this.particle.clone();
             p.spawn(this.particleSystem.gameObject.getPosition());
+            p.init();
         }
     }
     play() {
