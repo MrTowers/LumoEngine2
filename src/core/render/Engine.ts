@@ -4,6 +4,7 @@
  */
 
 import { Load } from "../Load.js";
+import { LUMO_settings } from "../LUMO_settings.js";
 import { GameObject } from "../objects/GameObject.js";
 import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
