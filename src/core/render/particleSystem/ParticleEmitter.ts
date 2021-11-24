@@ -9,7 +9,6 @@ export class ParticleEmitter {
     startDelay: number;
     amount: number;
     particleSystem: ParticleSystem;
-    components: ParticleComponent[];
 
     constructor (particle: Particle, particleSystem: ParticleSystem, delay = 0.25, amount = 1) {
         this.particle = particle;
@@ -18,7 +17,6 @@ export class ParticleEmitter {
         this.delay = delay;
         this.amount = amount;
         this.particleSystem = particleSystem;
-        this.components = [];
     }
 
     update (delta: number) {

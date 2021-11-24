@@ -11,4 +11,9 @@ export class PA_Gravity extends ParticleComponent {
     update (delta: number) {
         this.particle.velocity.y += this.gravity * (delta / 1000);
     }
+
+    clone (particle: Particle) {
+        let gr = new PA_Gravity(particle, this.gravity);
+        return gr;
+    }
 }

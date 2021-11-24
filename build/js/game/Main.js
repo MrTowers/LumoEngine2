@@ -22,7 +22,7 @@ export function main() {
     let particleSystem = new GameObject();
     let system = new ParticleSystem();
     let em1 = new ParticleEmitter(p, system, 0.25, 1);
-    em1.components = [
+    p.components = [
         new PA_Gravity(p)
     ];
     em1.play();

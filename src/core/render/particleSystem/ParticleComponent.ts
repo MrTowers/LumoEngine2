@@ -9,4 +9,9 @@ export class ParticleComponent {
     update (delta: number) {
         
     }
+
+    clone (particle: Particle) : ParticleComponent {
+        let p = new ParticleComponent(particle);
+        return p;
+    }
 }

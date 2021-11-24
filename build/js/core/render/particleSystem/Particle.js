@@ -41,11 +41,13 @@ export class Particle {
         this.components.push(component);
     }
     clone() {
-        let particle = new Particle(this.imageName, this.startlife);
-        particle.transform = this.transform.clone();
-        particle.velocity = this.velocity.clone();
-        particle.life = this.life;
-        particle.alpha = this.alpha;
-        return particle;
+        let p = new Particle(this.imageName, this.startlife);
+        p.velocity = this.velocity.clone();
+        p.alpha = this.alpha;
+        p.transform = this.transform.clone();
+        for (let i in this.components) {
+            p.components.push(this.components[i].clone(p));
+        }
+        return p;
     }
 }

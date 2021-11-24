@@ -4,4 +4,8 @@ export class ParticleComponent {
     }
     update(delta) {
     }
+    clone(particle) {
+        let p = new ParticleComponent(particle);
+        return p;
+    }
 }

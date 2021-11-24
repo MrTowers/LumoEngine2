@@ -6,7 +6,6 @@ export class ParticleEmitter {
         this.delay = delay;
         this.amount = amount;
         this.particleSystem = particleSystem;
-        this.components = [];
     }
     update(delta) {
         if (this.playing) {
