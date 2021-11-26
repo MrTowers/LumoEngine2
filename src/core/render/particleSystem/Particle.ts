@@ -37,8 +37,8 @@ export class Particle {
     }
 
     render(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
-        let x = this.transform.position.x + canvas.width / 2 - LUMO_ENGINE2.camera.position.x - this.image.width * this.transform.scale.x / 2;
-        let y = this.transform.position.y + canvas.height / 2 - LUMO_ENGINE2.camera.position.y - this.image.height * this.transform.scale.y / 2;
+        let x = this.transform.position.x + canvas.width / 2 - LUMO_ENGINE2.camera.position.x - LUMO_ENGINE2.camera.offset.x - this.image.width * this.transform.scale.x / 2;
+        let y = this.transform.position.y + canvas.height / 2 - LUMO_ENGINE2.camera.position.y - LUMO_ENGINE2.camera.offset.y - this.image.height * this.transform.scale.y / 2;
         if (x > 0 && x < canvas.width && y > 0 && y < canvas.height) {
             ctx.save();
             ctx.globalAlpha = this.alpha;
