@@ -1,6 +1,8 @@
 import { screenToWorldLocation } from "../core/functions/screenToWorldLocation.js";
 import { spawnGameObject } from "../core/functions/spawnGameObject.js";
 import { Vector2 } from "../core/math/Vector2.js";
+import { AnimKey } from "../core/objects/animation/AnimKey.js";
+import { AnimTrack } from "../core/objects/animation/AnimTrack.js";
 import { Component } from "../core/objects/Component.js";
 import { GameObject } from "../core/objects/GameObject.js";
 import { Camera } from "../core/render/Camera.js";

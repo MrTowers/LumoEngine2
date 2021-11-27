@@ -5,6 +5,7 @@
 
 import { Load } from "../Load.js";
 import { LUMO_settings } from "../LUMO_settings.js";
+import { AnimTrack } from "../objects/animation/AnimTrack.js";
 import { GameObject } from "../objects/GameObject.js";
 import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
@@ -20,6 +21,7 @@ export class Engine {
     paused: boolean;
     sounds: any;
     camera: Camera;
+    animations: AnimTrack[];
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -41,6 +43,7 @@ export class Engine {
         });
         this.camera = new Camera();
         this.particles = [];
+        this.animations = [];
     }
 
     render () {
@@ -57,6 +60,9 @@ export class Engine {
             this.scene.update(delta);
             for (let i in this.particles) {
                 this.particles[i].update(delta);
+            }
+            for (let i in this.animations) {
+                this.animations[i].update(delta);
             }
         }
     }

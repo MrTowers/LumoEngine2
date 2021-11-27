@@ -25,6 +25,7 @@ export class Engine {
         });
         this.camera = new Camera();
         this.particles = [];
+        this.animations = [];
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -38,6 +39,9 @@ export class Engine {
             this.scene.update(delta);
             for (let i in this.particles) {
                 this.particles[i].update(delta);
+            }
+            for (let i in this.animations) {
+                this.animations[i].update(delta);
             }
         }
     }
