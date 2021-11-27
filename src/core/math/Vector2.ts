@@ -100,4 +100,11 @@ export class Vector2 {
 
         return new Vector2(x, y);
     }
+
+    static direction (from: Vector2, to: Vector2) : Vector2 {
+        let x = to.x - from.x;
+        let y = to.y - from.y;
+
+        return new Vector2(x, y);
+    }
 }

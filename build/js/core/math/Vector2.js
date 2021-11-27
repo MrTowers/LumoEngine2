@@ -75,4 +75,9 @@ export class Vector2 {
         let y = rand(ymin, ymax);
         return new Vector2(x, y);
     }
+    static direction(from, to) {
+        let x = to.x - from.x;
+        let y = to.y - from.y;
+        return new Vector2(x, y);
+    }
 }
