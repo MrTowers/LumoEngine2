@@ -22,6 +22,10 @@
         <div class="content">
             <h1>Vector2 usage</h1>
             <div class="item">
+                <p>constructor</p>
+                <code>Vector2(x: number, y: number)</code>
+            </div>
+            <div class="item">
                 <code>add (v: Vector2) : Vector2</code>
                 <p>---</p>
                 <code>
@@ -31,12 +35,30 @@
                 </code>
             </div>
             <div class="item">
+                <code>addByNumber (n: number) : Vector2</code>
+                <p>---</p>
+                <code>
+                    v1 = new Vector2(2, 2);<br>
+                    v2 = v1.addByNumber(2) => Vector2(4, 4);
+                </code>
+            </div>
+            <div class="item">
                 <code>sub (v: Vector2) : Vector2</code>
                 <p>---</p>
                 <code>
                     v1 = new Vector2(3, 3);<br>
                     v2 = new Vector2(2, 2);<br>
                     v3 = v1.sub(v2) => Vector2(1, 1)
+                </code>
+            </div>
+            <div class="item">
+                <code>
+                    subByNumber(n: number) : Vector2
+                </code>
+                <p>---</p>
+                <code>
+                    v1 = new Vector2(2, 2);<br>
+                    v2 = v1.subByNumber(1, 1) => Vector2(1, 1)
                 </code>
             </div>
             <div class="item">
@@ -56,6 +78,26 @@
                     v2 = new Vector2(2, 2);<br>
                     v3 = v1.mul(v2) => Vector2(8, 8)
                 </code>
+            </div>
+            <div class="item">
+                <code>length () : number</code>
+                <p>---</p>
+                <p>return the length of the vector</p>
+            </div>
+            <div class="item">
+                <code>normalize () : Vector2</code>
+                <p>---</p>
+                <p>returns normalized vector</p>
+            </div>
+            <div class="item">
+                <code>distance (v: Vector2) : number</code>
+                <p>---</p>
+                <p>returns distance between vectors</p>
+            </div>
+            <div class="item">
+                <code>clone () : Vector2</code>
+                <p>---</p>
+                <p>returns copy of itself</p>
             </div>
         </div>
     </div>
