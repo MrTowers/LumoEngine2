@@ -15,6 +15,10 @@
     border-bottom: solid var(--mainColor) 5px;
 }
 
+.navbar a {
+    color: black;
+}
+
 button {
     border: none;
     background-color: var(--mainColor);
@@ -67,4 +71,12 @@ a {
 
 code {
     font-size: 15px;
+    background-color: rgb(32, 32, 32);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+img {
+    border-radius: 5px;
+    margin: 15px;
 }

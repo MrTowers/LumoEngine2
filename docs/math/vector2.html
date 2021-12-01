@@ -11,7 +11,7 @@
 
 <body>
     <div class="navbar">
-        <h1>LumoEngine2 Docs</h1>
+        <a href="../index.html">LumoEngine2 docs</a>
         <div class="searchbox">
             <input type="text" id="search" placeholder="search">
             <button>search</button>
@@ -71,12 +71,28 @@
                 </code>
             </div>
             <div class="item">
+                <code>divByNumber (n: number) : Vector2</code>
+                <p>---</p>
+                <code>
+                    v1 = new Vector2(4, 4);
+                    v2 = v1.divByNumber(2) => Vector2(2, 2);
+                </code>
+            </div>
+            <div class="item">
                 <code>mul (v: Vector2) : Vector2</code>
                 <p>---</p>
                 <code>
                     v1 = new Vector2(4, 4);<br>
                     v2 = new Vector2(2, 2);<br>
                     v3 = v1.mul(v2) => Vector2(8, 8)
+                </code>
+            </div>
+            <div class="item">
+                <code>mulByNumber (n: number) : Vector2</code>
+                <p>---</p>
+                <code>
+                    v1 = new Vector2(2, 2);
+                    v2 = v1.mulByNumber(2) => Vector2(4, 4)
                 </code>
             </div>
             <div class="item">
@@ -98,6 +114,43 @@
                 <code>clone () : Vector2</code>
                 <p>---</p>
                 <p>returns copy of itself</p>
+            </div>
+            <div class="item">
+                <code>flatten () : Vector2</code>
+                <p>---</p>
+                <p>returns vector2 flattened to x or y max 1, example:</p>
+                <code>
+                    v1 = new Vector2(2, 1);
+                    v2 = v1.flatten(); => Vector2(1, 0.5)
+                </code>
+            </div>
+            <div class="item">
+                <code>static between (input: Vector2, min: Vector2, max: Vector2) : boolean</code>
+                <p>---</p>
+                <p>return true if input will be between min and max</p>
+            </div>
+            <div class="item">
+                <code>static clamp (input: Vector2, min = 0, max = 0) : Vector2</code>
+                <p>---</p>
+                <code>
+                    v1 = new Vector2(2, 0.5);
+                    v2 = Vector2.clamp(v1, 0, 1) => Vector2(1, 0.5)
+                </code>
+            </div>
+            <div class="item">
+                <code>static equal (in1: Vector2, in2: Vector2) : boolean</code>
+                <p>---</p>
+                <p>returns true if in1 is equal in2</p>
+            </div>
+            <div class="item">
+                <code>static randomInRange (xmin = 0, xmax = 0, ymin = 0, ymax = 0) : Vector2</code>
+                <p>---</p>
+                <p>returns randomized Vector between inputs</p>
+            </div>
+            <div class="item">
+                <code>static direction (from: Vector2, to: Vector2) : Vector2</code>
+                <p>---</p>
+                <p>returns direction from vector to vector</p>
             </div>
         </div>
     </div>
