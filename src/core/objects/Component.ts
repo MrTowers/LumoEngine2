@@ -10,8 +10,8 @@ export class Component {
     gameObject!: GameObject;
     tag: string;
 
-    constructor () {
-        this.tag = "untagged";
+    constructor (tag = "untagged") {
+        this.tag = tag;
     }
 
     update (delta = 0) {

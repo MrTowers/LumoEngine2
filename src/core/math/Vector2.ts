@@ -73,6 +73,15 @@ export class Vector2 {
         return new Vector2(this.x * n, this.y * n);
     }
 
+    flatten () : Vector2 {
+        let div = Math.max(Math.abs(this.x), Math.abs(this.y));
+        return new Vector2(this.x / div, this.y / div);
+    }
+
+    toString () : string {
+        return `x: ${this.x}, y: ${this.y}`;
+    }
+
     static between (input: Vector2, min: Vector2, max: Vector2) : boolean {
         if (between(input.x, min.x, max.x)) {
             if (between(input.y, min.y, max.y)) {

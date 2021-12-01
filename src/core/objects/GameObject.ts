@@ -5,6 +5,7 @@
 
 
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
+import { LUMO_settings } from "../LUMO_settings.js";
 import { Transform } from "../math/Transform.js";
 import { Vector2 } from "../math/Vector2.js";
 import { Component } from "./Component.js";
@@ -12,10 +13,12 @@ import { Component } from "./Component.js";
 export class GameObject {
     transform: Transform;
     components: Component[];
+    tag: string;
 
-    constructor (transform = new Transform()) {
+    constructor (tag = "untagged") {
         this.components = [];
-        this.transform = transform;
+        this.transform = new Transform();
+        this.tag = tag;
     }
 
     addComponent (component: Component) : void {
@@ -25,6 +28,15 @@ export class GameObject {
 
     removeComponentById (id: number) : void {
         this.components.splice(id, 1);
+    }
+
+    removeComponentByTag (tag: string) : void {
+        for (let i = 0; i < this.components.length; i++) {
+            if (this.components[i].tag == tag) {
+                this.components.splice(i, 1);
+                return;
+            }
+        }
     }
 
     getComponentById (id: number) : Component {
@@ -37,7 +49,9 @@ export class GameObject {
                 return this.components[i];
             }
         }
-        console.error(`Component ${tag} cannot be found`);
+        if (LUMO_settings.debug) {
+            console.error(`Component with tag "${tag}" cannot be found`);
+        }
         
         return new Component();
     }
