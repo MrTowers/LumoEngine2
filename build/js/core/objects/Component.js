@@ -3,8 +3,8 @@
  * www.github/MrTowers
  */
 export class Component {
-    constructor() {
-        this.tag = "untagged";
+    constructor(tag = "untagged") {
+        this.tag = tag;
     }
     update(delta = 0) {
     }

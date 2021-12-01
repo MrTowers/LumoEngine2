@@ -52,6 +52,13 @@ export class Vector2 {
     mulByNumber(n) {
         return new Vector2(this.x * n, this.y * n);
     }
+    flatten() {
+        let div = Math.max(Math.abs(this.x), Math.abs(this.y));
+        return new Vector2(this.x / div, this.y / div);
+    }
+    toString() {
+        return `x: ${this.x}, y: ${this.y}`;
+    }
     static between(input, min, max) {
         if (between(input.x, min.x, max.x)) {
             if (between(input.y, min.y, max.y)) {

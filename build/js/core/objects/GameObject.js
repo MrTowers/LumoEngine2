@@ -3,12 +3,14 @@
  * www.github/MrTowers
  */
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
+import { LUMO_settings } from "../LUMO_settings.js";
 import { Transform } from "../math/Transform.js";
 import { Component } from "./Component.js";
 export class GameObject {
-    constructor(transform = new Transform()) {
+    constructor(tag = "untagged") {
         this.components = [];
-        this.transform = transform;
+        this.transform = new Transform();
+        this.tag = tag;
     }
     addComponent(component) {
         component.gameObject = this;
@@ -16,6 +18,14 @@ export class GameObject {
     }
     removeComponentById(id) {
         this.components.splice(id, 1);
+    }
+    removeComponentByTag(tag) {
+        for (let i = 0; i < this.components.length; i++) {
+            if (this.components[i].tag == tag) {
+                this.components.splice(i, 1);
+                return;
+            }
+        }
     }
     getComponentById(id) {
         return this.components[id];
@@ -26,7 +36,9 @@ export class GameObject {
                 return this.components[i];
             }
         }
-        console.error(`Component ${tag} cannot be found`);
+        if (LUMO_settings.debug) {
+            console.error(`Component with tag "${tag}" cannot be found`);
+        }
         return new Component();
     }
     getPosition() {
