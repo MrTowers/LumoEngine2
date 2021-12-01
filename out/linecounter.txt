@@ -491,3 +491,137 @@ src\game\Main.ts, code is 51, comment is 1, blank is 5.
 src\LumoEngine2.ts, code is 25, comment is 4, blank is 7.
 tsconfig.json, code is 11, comment is 81, blank is 8.
 ===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2021-12-01 11:02:17
+count workspace : c:\Users\dawid\Desktop\Folder Dejwa\repo\RimWorldInJs
+total files : 113
+total code lines : 2496 (+661)
+total comment lines : 373
+total blank lines : 279
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |          .html|            323|              0|             23|     13|
+   |          .json|             11|             81|              8|   0.44|
+   |           .css|             79|              0|             12|    3.2|
+   |            .ts|           1045|            142|            236|     42|
+   |            .js|           1038|            150|              0|     42|
+   -------------------------------------------------------------------------
+build\index.html, code is 13, comment is 0, blank is 0.
+build\js\core\audio\AudioCue.js, code is 42, comment is 5, blank is 0.
+build\js\core\audio\AudioSource.js, code is 5, comment is 4, blank is 0.
+build\js\core\functions\DoOnce.js, code is 15, comment is 4, blank is 0.
+build\js\core\functions\getGameObjectByTag.js, code is 15, comment is 4, blank is 0.
+build\js\core\functions\loadFile.js, code is 8, comment is 4, blank is 0.
+build\js\core\functions\loadJSON.js, code is 8, comment is 4, blank is 0.
+build\js\core\functions\math\between.js, code is 3, comment is 4, blank is 0.
+build\js\core\functions\math\clamp.js, code is 3, comment is 4, blank is 0.
+build\js\core\functions\math\rand.js, code is 3, comment is 4, blank is 0.
+build\js\core\functions\math\smoothFloat.js, code is 3, comment is 4, blank is 0.
+build\js\core\functions\math\snapToGrid.js, code is 3, comment is 4, blank is 0.
+build\js\core\functions\playSound.js, code is 4, comment is 4, blank is 0.
+build\js\core\functions\scene manager\loadScene.js, code is 4, comment is 4, blank is 0.
+build\js\core\functions\scene manager\registerScene.js, code is 4, comment is 4, blank is 0.
+build\js\core\functions\screenToWorldLocation.js, code is 9, comment is 4, blank is 0.
+build\js\core\functions\setPaused.js, code is 4, comment is 4, blank is 0.
+build\js\core\functions\spawnGameObject.js, code is 5, comment is 4, blank is 0.
+build\js\core\Load.js, code is 20, comment is 4, blank is 0.
+build\js\core\LUMO_settings.js, code is 3, comment is 0, blank is 0.
+build\js\core\math\Color.js, code is 41, comment is 4, blank is 0.
+build\js\core\math\Field.js, code is 18, comment is 4, blank is 0.
+build\js\core\math\Transform.js, code is 26, comment is 4, blank is 0.
+build\js\core\math\Vector2.js, code is 86, comment is 4, blank is 0.
+build\js\core\networking\Network.js, code is 11, comment is 1, blank is 0.
+build\js\core\objects\animation\AnimKey.js, code is 6, comment is 4, blank is 0.
+build\js\core\objects\animation\AnimTrack.js, code is 87, comment is 4, blank is 0.
+build\js\core\objects\Component.js, code is 14, comment is 4, blank is 0.
+build\js\core\objects\GameObject.js, code is 70, comment is 4, blank is 0.
+build\js\core\objects\Scene.js, code is 19, comment is 4, blank is 0.
+build\js\core\postinit.js, code is 4, comment is 0, blank is 0.
+build\js\core\render\Box.js, code is 17, comment is 4, blank is 0.
+build\js\core\render\Camera.js, code is 10, comment is 4, blank is 0.
+build\js\core\render\effects\CameraShake.js, code is 34, comment is 0, blank is 0.
+build\js\core\render\Engine.js, code is 48, comment is 4, blank is 0.
+build\js\core\render\particleSystem\components\PA_AlphaOverLife.js, code is 24, comment is 0, blank is 0.
+build\js\core\render\particleSystem\components\PA_Gravity.js, code is 14, comment is 0, blank is 0.
+build\js\core\render\particleSystem\components\PA_InitialVelocity.js, code is 15, comment is 0, blank is 0.
+build\js\core\render\particleSystem\components\PA_RandomLocation.js, code is 18, comment is 0, blank is 0.
+build\js\core\render\particleSystem\Particle.js, code is 61, comment is 4, blank is 0.
+build\js\core\render\particleSystem\ParticleComponent.js, code is 13, comment is 4, blank is 0.
+build\js\core\render\particleSystem\ParticleEmitter.js, code is 33, comment is 4, blank is 0.
+build\js\core\render\particleSystem\ParticleSystem.js, code is 30, comment is 4, blank is 0.
+build\js\core\render\Sprite.js, code is 30, comment is 4, blank is 0.
+build\js\core\render\Tilemap.js, code is 21, comment is 4, blank is 0.
+build\js\game\CameraController.js, code is 54, comment is 0, blank is 0.
+build\js\game\Main.js, code is 2, comment is 0, blank is 0.
+build\js\game\prefabs\Player.js, code is 10, comment is 0, blank is 0.
+build\js\game\scripts\PlayerController.js, code is 36, comment is 0, blank is 0.
+build\js\LumoEngine2.js, code is 25, comment is 4, blank is 0.
+build\style.css, code is 5, comment is 0, blank is 0.
+docs\allcontent.html, code is 43, comment is 0, blank is 7.
+docs\content.css, code is 4, comment is 0, blank is 0.
+docs\examples\playerexample.html, code is 40, comment is 0, blank is 4.
+docs\examples\playerexampleimages\controller.png, it is a binary file.
+docs\examples\playerexampleimages\dodano component.png, it is a binary file.
+docs\examples\playerexampleimages\movement.png, it is a binary file.
+docs\examples\playerexampleimages\spawn.png, it is a binary file.
+docs\examples\playerexampleimages\texture.png, it is a binary file.
+docs\examples\playerexampleimages\update.png, it is a binary file.
+docs\examples\playerexampleimages\Zrzut ekranu 2021-12-01 102556.png, it is a binary file.
+docs\examples\playerexampleimages\Zrzut ekranu 2021-12-01 102911.png, it is a binary file.
+docs\gettingstarted.html, code is 29, comment is 0, blank is 4.
+docs\index.html, code is 42, comment is 0, blank is 4.
+docs\math\vector2.html, code is 156, comment is 0, blank is 4.
+docs\style.css, code is 70, comment is 0, blank is 12.
+README.md, it is a binary file.
+src\core\assets\Light.png, it is a binary file.
+src\core\audio\AudioCue.ts, code is 54, comment is 5, blank is 10.
+src\core\audio\AudioSource.ts, code is 6, comment is 4, blank is 2.
+src\core\functions\DoOnce.ts, code is 17, comment is 4, blank is 4.
+src\core\functions\getGameObjectByTag.ts, code is 15, comment is 4, blank is 3.
+src\core\functions\math\between.ts, code is 3, comment is 4, blank is 1.
+src\core\functions\math\clamp.ts, code is 3, comment is 4, blank is 1.
+src\core\functions\math\rand.ts, code is 3, comment is 4, blank is 1.
+src\core\functions\math\smoothFloat.ts, code is 3, comment is 4, blank is 1.
+src\core\functions\math\snapToGrid.ts, code is 3, comment is 4, blank is 1.
+src\core\functions\playSound.ts, code is 4, comment is 4, blank is 2.
+src\core\functions\scene manager\loadScene.ts, code is 4, comment is 4, blank is 2.
+src\core\functions\scene manager\registerScene.ts, code is 5, comment is 4, blank is 2.
+src\core\functions\screenToWorldLocation.ts, code is 9, comment is 4, blank is 3.
+src\core\functions\setPaused.ts, code is 4, comment is 4, blank is 2.
+src\core\functions\spawnGameObject.ts, code is 7, comment is 4, blank is 2.
+src\core\Load.ts, code is 20, comment is 4, blank is 5.
+src\core\LUMO_settings.ts, code is 3, comment is 0, blank is 0.
+src\core\math\Color.ts, code is 42, comment is 4, blank is 9.
+src\core\math\Field.ts, code is 20, comment is 4, blank is 5.
+src\core\math\Transform.ts, code is 29, comment is 4, blank is 10.
+src\core\math\Vector2.ts, code is 88, comment is 4, blank is 27.
+src\core\networking\Network.ts, code is 11, comment is 1, blank is 1.
+src\core\objects\animation\AnimKey.ts, code is 8, comment is 4, blank is 2.
+src\core\objects\animation\AnimTrack.ts, code is 95, comment is 4, blank is 19.
+src\core\objects\Component.ts, code is 17, comment is 4, blank is 11.
+src\core\objects\GameObject.ts, code is 74, comment is 4, blank is 18.
+src\core\objects\Scene.ts, code is 21, comment is 4, blank is 6.
+src\core\postinit.ts, code is 4, comment is 0, blank is 1.
+src\core\render\Box.ts, code is 20, comment is 4, blank is 5.
+src\core\render\Camera.ts, code is 12, comment is 4, blank is 4.
+src\core\render\effects\CameraShake.ts, code is 39, comment is 0, blank is 4.
+src\core\render\Engine.ts, code is 63, comment is 4, blank is 7.
+src\core\render\particleSystem\components\PA_AlphaOverLife.ts, code is 26, comment is 0, blank is 4.
+src\core\render\particleSystem\components\PA_Gravity.ts, code is 16, comment is 0, blank is 3.
+src\core\render\particleSystem\components\PA_InitialVelocity.ts, code is 18, comment is 0, blank is 4.
+src\core\render\particleSystem\components\PA_RandomLocation.ts, code is 21, comment is 0, blank is 3.
+src\core\render\particleSystem\Particle.ts, code is 70, comment is 4, blank is 12.
+src\core\render\particleSystem\ParticleComponent.ts, code is 15, comment is 4, blank is 8.
+src\core\render\particleSystem\ParticleEmitter.ts, code is 42, comment is 4, blank is 7.
+src\core\render\particleSystem\ParticleSystem.ts, code is 33, comment is 4, blank is 7.
+src\core\render\Sprite.ts, code is 35, comment is 4, blank is 5.
+src\core\render\Tilemap.ts, code is 36, comment is 4, blank is 4.
+src\game\Main.ts, code is 2, comment is 0, blank is 1.
+src\LumoEngine2.ts, code is 25, comment is 4, blank is 7.
+tsconfig.json, code is 11, comment is 81, blank is 8.
+===============================================================================

@@ -2526,6 +2526,731 @@
                     "filename": "tsconfig.json"
                 }
             ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2021-12-01 11:02:17",
+            "filesum": 113,
+            "codesum": 2496,
+            "commentsum": 373,
+            "blanksum": 279,
+            "statistics": {
+                ".html": {
+                    "code": 323,
+                    "comment": 0,
+                    "blank": 23
+                },
+                ".json": {
+                    "code": 11,
+                    "comment": 81,
+                    "blank": 8
+                },
+                ".css": {
+                    "code": 79,
+                    "comment": 0,
+                    "blank": 12
+                },
+                ".ts": {
+                    "code": 1045,
+                    "comment": 142,
+                    "blank": 236
+                },
+                ".js": {
+                    "code": 1038,
+                    "comment": 150,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "build\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 42,
+                    "comment": 5,
+                    "filename": "build\\js\\core\\audio\\AudioCue.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\audio\\AudioSource.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\DoOnce.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\getGameObjectByTag.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\loadFile.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 8,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\loadJSON.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\math\\between.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\math\\clamp.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\math\\rand.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\math\\smoothFloat.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\math\\snapToGrid.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\playSound.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\scene manager\\loadScene.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\scene manager\\registerScene.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\screenToWorldLocation.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\setPaused.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\functions\\spawnGameObject.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 20,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\Load.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\LUMO_settings.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 41,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Color.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 18,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Field.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 26,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Transform.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 86,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\math\\Vector2.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 11,
+                    "comment": 1,
+                    "filename": "build\\js\\core\\networking\\Network.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\animation\\AnimKey.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 87,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\animation\\AnimTrack.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\Component.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 70,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\GameObject.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 19,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\objects\\Scene.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\postinit.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Box.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Camera.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 34,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\render\\effects\\CameraShake.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 48,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Engine.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\render\\particleSystem\\components\\PA_AlphaOverLife.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\render\\particleSystem\\components\\PA_Gravity.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\render\\particleSystem\\components\\PA_InitialVelocity.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "build\\js\\core\\render\\particleSystem\\components\\PA_RandomLocation.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 61,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\particleSystem\\Particle.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\particleSystem\\ParticleComponent.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 33,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\particleSystem\\ParticleEmitter.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\particleSystem\\ParticleSystem.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 30,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Sprite.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 21,
+                    "comment": 4,
+                    "filename": "build\\js\\core\\render\\Tilemap.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 54,
+                    "comment": 0,
+                    "filename": "build\\js\\game\\CameraController.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "build\\js\\game\\Main.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "build\\js\\game\\prefabs\\Player.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "build\\js\\game\\scripts\\PlayerController.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 4,
+                    "filename": "build\\js\\LumoEngine2.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "build\\style.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 43,
+                    "comment": 0,
+                    "filename": "docs\\allcontent.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "docs\\content.css"
+                },
+                {
+                    "blank": 4,
+                    "code": 40,
+                    "comment": 0,
+                    "filename": "docs\\examples\\playerexample.html"
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\controller.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\dodano component.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\movement.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\spawn.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\texture.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\update.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\Zrzut ekranu 2021-12-01 102556.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "docs\\examples\\playerexampleimages\\Zrzut ekranu 2021-12-01 102911.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "docs\\gettingstarted.html"
+                },
+                {
+                    "blank": 4,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "docs\\index.html"
+                },
+                {
+                    "blank": 4,
+                    "code": 156,
+                    "comment": 0,
+                    "filename": "docs\\math\\vector2.html"
+                },
+                {
+                    "blank": 12,
+                    "code": 70,
+                    "comment": 0,
+                    "filename": "docs\\style.css"
+                },
+                {
+                    "filename": "README.md",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\core\\assets\\Light.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 54,
+                    "comment": 5,
+                    "filename": "src\\core\\audio\\AudioCue.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 6,
+                    "comment": 4,
+                    "filename": "src\\core\\audio\\AudioSource.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\DoOnce.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\getGameObjectByTag.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\math\\between.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\math\\clamp.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\math\\rand.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\math\\smoothFloat.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 3,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\math\\snapToGrid.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\playSound.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\scene manager\\loadScene.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\scene manager\\registerScene.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 9,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\screenToWorldLocation.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 4,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\setPaused.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 4,
+                    "filename": "src\\core\\functions\\spawnGameObject.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 4,
+                    "filename": "src\\core\\Load.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\core\\LUMO_settings.ts"
+                },
+                {
+                    "blank": 9,
+                    "code": 42,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Color.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Field.ts"
+                },
+                {
+                    "blank": 10,
+                    "code": 29,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Transform.ts"
+                },
+                {
+                    "blank": 27,
+                    "code": 88,
+                    "comment": 4,
+                    "filename": "src\\core\\math\\Vector2.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 1,
+                    "filename": "src\\core\\networking\\Network.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 8,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\animation\\AnimKey.ts"
+                },
+                {
+                    "blank": 19,
+                    "code": 95,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\animation\\AnimTrack.ts"
+                },
+                {
+                    "blank": 11,
+                    "code": 17,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\Component.ts"
+                },
+                {
+                    "blank": 18,
+                    "code": 74,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\GameObject.ts"
+                },
+                {
+                    "blank": 6,
+                    "code": 21,
+                    "comment": 4,
+                    "filename": "src\\core\\objects\\Scene.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "src\\core\\postinit.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 20,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Box.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Camera.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "src\\core\\render\\effects\\CameraShake.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 63,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Engine.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "src\\core\\render\\particleSystem\\components\\PA_AlphaOverLife.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "src\\core\\render\\particleSystem\\components\\PA_Gravity.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "src\\core\\render\\particleSystem\\components\\PA_InitialVelocity.ts"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "src\\core\\render\\particleSystem\\components\\PA_RandomLocation.ts"
+                },
+                {
+                    "blank": 12,
+                    "code": 70,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\particleSystem\\Particle.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 15,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\particleSystem\\ParticleComponent.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 42,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\particleSystem\\ParticleEmitter.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 33,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\particleSystem\\ParticleSystem.ts"
+                },
+                {
+                    "blank": 5,
+                    "code": 35,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Sprite.ts"
+                },
+                {
+                    "blank": 4,
+                    "code": 36,
+                    "comment": 4,
+                    "filename": "src\\core\\render\\Tilemap.ts"
+                },
+                {
+                    "blank": 1,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "src\\game\\Main.ts"
+                },
+                {
+                    "blank": 7,
+                    "code": 25,
+                    "comment": 4,
+                    "filename": "src\\LumoEngine2.ts"
+                },
+                {
+                    "blank": 8,
+                    "code": 11,
+                    "comment": 81,
+                    "filename": "tsconfig.json"
+                }
+            ]
         }
     ]
 }
