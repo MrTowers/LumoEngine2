@@ -6,6 +6,7 @@
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { clamp } from "../functions/math/clamp.js";
 import { Component } from "../objects/Component.js";
+import { AudioSource } from "./AudioSource.js";
 
 export class AudioCue extends Component {
     volume: number;
@@ -15,11 +16,12 @@ export class AudioCue extends Component {
     positionStereo: boolean;
     positionStereoDistance: number;
     audio: HTMLAudioElement;
+    looping: boolean;
     private audioCTX: AudioContext;
     private panner: StereoPannerNode;
     private source: MediaElementAudioSourceNode;
 
-    constructor (audio: HTMLAudioElement, volume = 1, pitch = 1) {
+    constructor (audio: AudioSource, volume = 1, pitch = 1) {
         super();
         this.volume = volume;
         this.pitch = pitch;
@@ -27,7 +29,8 @@ export class AudioCue extends Component {
         this.positionStereo = false;
         this.positionVolumeDistance = 1000;
         this.positionStereoDistance = 1000;
-        this.audio = audio;
+        this.audio = audio.audio;
+        this.looping = false;
 
         this.audioCTX = new AudioContext();
         this.panner = this.audioCTX.createStereoPanner();

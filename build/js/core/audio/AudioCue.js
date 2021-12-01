@@ -14,7 +14,8 @@ export class AudioCue extends Component {
         this.positionStereo = false;
         this.positionVolumeDistance = 1000;
         this.positionStereoDistance = 1000;
-        this.audio = audio;
+        this.audio = audio.audio;
+        this.looping = false;
         this.audioCTX = new AudioContext();
         this.panner = this.audioCTX.createStereoPanner();
         this.source = this.audioCTX.createMediaElementSource(this.audio);
