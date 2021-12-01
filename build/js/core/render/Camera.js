@@ -1,3 +1,7 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
 import { Vector2 } from "../math/Vector2.js";
 export class Camera {
     constructor() {

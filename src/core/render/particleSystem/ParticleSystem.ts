@@ -1,3 +1,8 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
 import { Component } from "../../objects/Component.js";
 import { GameObject } from "../../objects/GameObject.js";
 import { ParticleEmitter } from "./ParticleEmitter.js";

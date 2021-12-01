@@ -1,3 +1,8 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
 import { Particle } from "./Particle.js";
 
 export class ParticleComponent {

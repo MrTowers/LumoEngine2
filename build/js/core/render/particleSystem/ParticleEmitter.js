@@ -1,3 +1,7 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
 export class ParticleEmitter {
     constructor(particle, particleSystem, delay = 0.25, amount = 1) {
         this.particle = particle;

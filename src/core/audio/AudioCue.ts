@@ -1,3 +1,8 @@
+/**
+ * Copyright LumoEngine2 by Dawid Twers
+ * www.github/MrTowers
+ */
+
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { clamp } from "../functions/math/clamp.js";
 import { Component } from "../objects/Component.js";
