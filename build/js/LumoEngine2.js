@@ -10,6 +10,8 @@ export const LUMO_ENGINE2 = new Engine();
 let lastTime = 0;
 let now = performance.now();
 let delta = 0;
+let ticksCounter = 0;
+let fps = 0;
 function tick() {
     now = performance.now();
     delta = now - lastTime;
@@ -17,13 +19,23 @@ function tick() {
     LUMO_ENGINE2.update(delta);
     LUMO_ENGINE2.render();
     if (LUMO_settings.debug) {
+        ticksCounter++;
         LUMO_ENGINE2.ctx.save();
         LUMO_ENGINE2.ctx.fillStyle = "white";
-        LUMO_ENGINE2.ctx.fillText(`FPS: ${(1000 / delta).toFixed(0)}`, 0, 10);
+        LUMO_ENGINE2.ctx.fillText(`FPS: ${fps}`, 0, 10);
         LUMO_ENGINE2.ctx.restore();
     }
-    requestAnimationFrame(tick);
+    if (LUMO_settings.fpsLimiter) {
+        setTimeout(tick, 1000 / LUMO_settings.fpsMax);
+    }
+    else {
+        requestAnimationFrame(tick);
+    }
 }
+setInterval(() => {
+    fps = ticksCounter;
+    ticksCounter = 0;
+}, 1000);
 tick();
 postinit();
 main();
