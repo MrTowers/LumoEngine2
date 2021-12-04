@@ -82,6 +82,10 @@ export class Vector2 {
         return `x: ${this.x}, y: ${this.y}`;
     }
 
+    invert () : Vector2 {
+        return new Vector2(-this.x, -this.y);
+    }
+
     static between (input: Vector2, min: Vector2, max: Vector2) : boolean {
         if (between(input.x, min.x, max.x)) {
             if (between(input.y, min.y, max.y)) {

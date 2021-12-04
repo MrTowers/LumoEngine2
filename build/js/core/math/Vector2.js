@@ -59,6 +59,9 @@ export class Vector2 {
     toString() {
         return `x: ${this.x}, y: ${this.y}`;
     }
+    invert() {
+        return new Vector2(-this.x, -this.y);
+    }
     static between(input, min, max) {
         if (between(input.x, min.x, max.x)) {
             if (between(input.y, min.y, max.y)) {

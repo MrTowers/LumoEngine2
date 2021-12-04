@@ -3,6 +3,7 @@
  * www.github/MrTowers
  */
 
+import { Input } from "../control/Input.js";
 import { Load } from "../Load.js";
 import { LUMO_settings } from "../LUMO_settings.js";
 import { AnimTrack } from "../objects/animation/AnimTrack.js";
@@ -23,6 +24,7 @@ export class Engine {
     camera: Camera;
     animations: AnimTrack[];
     version: string;
+    input: Input;
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -47,6 +49,7 @@ export class Engine {
         this.animations = [];
 
         this.version = "0.21";
+        this.input = new Input();
     }
 
     render () {
@@ -67,6 +70,8 @@ export class Engine {
             for (let i in this.animations) {
                 this.animations[i].update(delta);
             }
+            
+            this.input.update();
         }
     }
 

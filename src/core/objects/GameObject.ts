@@ -64,6 +64,10 @@ export class GameObject {
         this.transform.position = location;
     }
 
+    addPosition (v: Vector2) {
+        this.transform.position = this.transform.position.add(v);
+    }
+
     getRotation () : number {
         return this.transform.rotation;
     }

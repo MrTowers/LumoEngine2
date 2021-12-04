@@ -2,6 +2,7 @@
  * Copyright LumoEngine2 by Dawid Twers
  * www.github/MrTowers
  */
+import { Input } from "../control/Input.js";
 import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
 export class Engine {
@@ -26,6 +27,8 @@ export class Engine {
         this.camera = new Camera();
         this.particles = [];
         this.animations = [];
+        this.version = "0.21";
+        this.input = new Input();
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -43,6 +46,7 @@ export class Engine {
             for (let i in this.animations) {
                 this.animations[i].update(delta);
             }
+            this.input.update();
         }
     }
     resize() {

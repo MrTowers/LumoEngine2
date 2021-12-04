@@ -47,6 +47,9 @@ export class GameObject {
     setPosition(location) {
         this.transform.position = location;
     }
+    addPosition(v) {
+        this.transform.position = this.transform.position.add(v);
+    }
     getRotation() {
         return this.transform.rotation;
     }
