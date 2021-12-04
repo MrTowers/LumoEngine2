@@ -22,6 +22,7 @@ export class Engine {
     sounds: any;
     camera: Camera;
     animations: AnimTrack[];
+    version: string;
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -44,6 +45,8 @@ export class Engine {
         this.camera = new Camera();
         this.particles = [];
         this.animations = [];
+
+        this.version = "0.21";
     }
 
     render () {
