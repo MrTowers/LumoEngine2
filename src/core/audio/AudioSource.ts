@@ -5,8 +5,14 @@
 
 export class AudioSource {
     audio: HTMLAudioElement;
+    src: string;
 
     constructor (src = "") {
-        this.audio = new Audio(`../src/game/${src}`);
+        this.src = src;
+        this.audio = new Audio(this.src);
+    }
+
+    getAudio () : HTMLAudioElement {
+        return new Audio(this.src);
     }
 }

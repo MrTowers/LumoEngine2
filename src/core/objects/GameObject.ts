@@ -5,6 +5,7 @@
 
 
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
+import { uniqid } from "../functions/uniqid.js";
 import { LUMO_settings } from "../LUMO_settings.js";
 import { Transform } from "../math/Transform.js";
 import { Vector2 } from "../math/Vector2.js";
@@ -14,11 +15,15 @@ export class GameObject {
     transform: Transform;
     components: Component[];
     tag: string;
+    uniqid: string;
+    spawned: boolean;
 
     constructor (tag = "untagged") {
         this.components = [];
         this.transform = new Transform();
         this.tag = tag;
+        this.uniqid = uniqid();
+        this.spawned = false;
     }
 
     addComponent (component: Component) : void {
@@ -64,16 +69,23 @@ export class GameObject {
         this.transform.position = location;
     }
 
-    addPosition (v: Vector2) {
-        this.transform.position = this.transform.position.add(v);
-    }
-
     getRotation () : number {
         return this.transform.rotation;
     }
 
     setRotation (rotation: number) {
         this.transform.rotation = rotation;
+    }
+
+    getZ() : number {
+        return this.transform.z;
+    }
+
+    setZ(value: number) {
+        this.transform.z = value;
+        if (this.spawned) {
+            LUMO_ENGINE2.recalculateZ();
+        }
     }
 
     render (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {

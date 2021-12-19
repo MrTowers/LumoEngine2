@@ -60,7 +60,7 @@ export class Vector2 {
         return `x: ${this.x}, y: ${this.y}`;
     }
     invert() {
-        return new Vector2(-this.x, -this.y);
+        return new Vector2(this.y, this.x);
     }
     static between(input, min, max) {
         if (between(input.x, min.x, max.x)) {
@@ -89,5 +89,17 @@ export class Vector2 {
         let x = to.x - from.x;
         let y = to.y - from.y;
         return new Vector2(x, y);
+    }
+    static up() {
+        return new Vector2(0, -1);
+    }
+    static down() {
+        return new Vector2(0, 1);
+    }
+    static right() {
+        return new Vector2(1, 0);
+    }
+    static left() {
+        return new Vector2(-1, 0);
     }
 }

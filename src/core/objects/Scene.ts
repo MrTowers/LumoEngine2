@@ -3,6 +3,7 @@
  * www.github/MrTowers
  */
 
+import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { GameObject } from "./GameObject.js";
 
 export class Scene {
@@ -14,6 +15,7 @@ export class Scene {
 
     spawnGameObject (gameObject: GameObject) {
         this.objects.push(gameObject);
+        LUMO_ENGINE2.recalculateZ();
         gameObject.start();
     }
 

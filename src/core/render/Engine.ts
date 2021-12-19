@@ -4,8 +4,7 @@
  */
 
 import { Input } from "../control/Input.js";
-import { Load } from "../Load.js";
-import { LUMO_settings } from "../LUMO_settings.js";
+import { Logger } from "../debug/Logger.js";
 import { AnimTrack } from "../objects/animation/AnimTrack.js";
 import { GameObject } from "../objects/GameObject.js";
 import { Scene } from "../objects/Scene.js";
@@ -23,8 +22,11 @@ export class Engine {
     sounds: any;
     camera: Camera;
     animations: AnimTrack[];
-    version: string;
+    logger: Logger;
     input: Input;
+    timescale: number;
+    version: string;
+    timepassed: number;
 
     constructor () {
         this.canvas = document.createElement("canvas");
@@ -47,9 +49,13 @@ export class Engine {
         this.camera = new Camera();
         this.particles = [];
         this.animations = [];
-
-        this.version = "0.21";
+        this.logger = new Logger();
         this.input = new Input();
+        this.timescale = 1;
+
+        this.version = "0.24a";
+
+        this.timepassed = 0;
     }
 
     render () {
@@ -59,6 +65,7 @@ export class Engine {
         for (let i in this.particles) {
             this.particles[i].render(this.ctx, this.canvas);
         }
+        this.logger.render(this.ctx);
     }
 
     update (delta = 0) {
@@ -70,13 +77,20 @@ export class Engine {
             for (let i in this.animations) {
                 this.animations[i].update(delta);
             }
-            
+            this.logger.update(delta);
             this.input.update();
+            this.timepassed += delta / 1000;
         }
     }
 
     resize () {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+    }
+
+    recalculateZ () {
+        this.scene.objects.sort((a: GameObject, b: GameObject) : any => {
+            return a.getZ() - b.getZ();
+        });
     }
 }

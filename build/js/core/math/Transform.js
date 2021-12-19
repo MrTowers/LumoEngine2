@@ -8,6 +8,7 @@ export class Transform {
         this.position = position;
         this.scale = scale;
         this.rotation = rotation;
+        this.z = 0;
     }
     add(t = new Transform()) {
         return new Transform(this.position.add(t.position), this.scale.add(t.scale));

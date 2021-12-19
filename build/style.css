@@ -3,3 +3,14 @@
     margin: 0;
     overflow: hidden;
 }
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 500px;
+    image-rendering: pixelated;
+}
