@@ -1,15 +1,12 @@
 import { PostprocessComponent } from "../PostprocessComponent.js";
-
 export class PP_Vignette extends PostprocessComponent {
-    image: HTMLImageElement;
-    strength: number = 1;
-    constructor () {
+    constructor() {
         super();
+        this.strength = 1;
         this.image = new Image();
         this.image.src = "../src/core/assets/vignette.png";
     }
-
-    render(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement): void {
+    render(ctx, canvas) {
         ctx.save();
         ctx.globalAlpha = this.strength;
         ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height);

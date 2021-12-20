@@ -8,6 +8,7 @@ import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
 export class Engine {
     constructor() {
+        this.postprocessEffects = [];
         this.canvas = document.createElement("canvas");
         window.addEventListener("resize", (e) => {
             this.resize();
@@ -41,6 +42,9 @@ export class Engine {
             this.particles[i].render(this.ctx, this.canvas);
         }
         this.logger.render(this.ctx);
+        for (let i in this.postprocessEffects) {
+            this.postprocessEffects[i].render(this.ctx, this.canvas);
+        }
     }
     update(delta = 0) {
         if (!this.paused) {
