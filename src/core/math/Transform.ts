@@ -4,10 +4,12 @@
  */
 
 
+import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
 import { Vector2 } from "./Vector2.js";
 
 export class Transform {
     position: Vector2;
+    z: number;
     scale: Vector2;
     rotation: number;
 
@@ -15,6 +17,7 @@ export class Transform {
         this.position = position;
         this.scale = scale;
         this.rotation = rotation;
+        this.z = 0;
     }
 
     add (t = new Transform()) : Transform {

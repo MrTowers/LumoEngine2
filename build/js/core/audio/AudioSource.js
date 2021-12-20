@@ -4,6 +4,10 @@
  */
 export class AudioSource {
     constructor(src = "") {
-        this.audio = new Audio(`../src/game/${src}`);
+        this.src = src;
+        this.audio = new Audio(this.src);
+    }
+    getAudio() {
+        return new Audio(this.src);
     }
 }

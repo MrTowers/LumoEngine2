@@ -3,6 +3,7 @@
  * www.github/MrTowers
  */
 import { Input } from "../control/Input.js";
+import { Logger } from "../debug/Logger.js";
 import { Scene } from "../objects/Scene.js";
 import { Camera } from "./Camera.js";
 export class Engine {
@@ -27,8 +28,11 @@ export class Engine {
         this.camera = new Camera();
         this.particles = [];
         this.animations = [];
-        this.version = "0.21";
+        this.logger = new Logger();
         this.input = new Input();
+        this.timescale = 1;
+        this.version = "0.24a";
+        this.timepassed = 0;
     }
     render() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -36,6 +40,7 @@ export class Engine {
         for (let i in this.particles) {
             this.particles[i].render(this.ctx, this.canvas);
         }
+        this.logger.render(this.ctx);
     }
     update(delta = 0) {
         if (!this.paused) {
@@ -46,11 +51,18 @@ export class Engine {
             for (let i in this.animations) {
                 this.animations[i].update(delta);
             }
+            this.logger.update(delta);
             this.input.update();
+            this.timepassed += delta / 1000;
         }
     }
     resize() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+    }
+    recalculateZ() {
+        this.scene.objects.sort((a, b) => {
+            return a.getZ() - b.getZ();
+        });
     }
 }

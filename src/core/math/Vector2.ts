@@ -83,7 +83,7 @@ export class Vector2 {
     }
 
     invert () : Vector2 {
-        return new Vector2(-this.x, -this.y);
+        return new Vector2(this.y, this.x);
     }
 
     static between (input: Vector2, min: Vector2, max: Vector2) : boolean {
@@ -119,5 +119,21 @@ export class Vector2 {
         let y = to.y - from.y;
 
         return new Vector2(x, y);
+    }
+
+    static up () : Vector2 {
+        return new Vector2(0, -1);
+    }
+
+    static down () : Vector2 {
+        return new Vector2(0, 1);
+    }
+
+    static right () : Vector2 {
+        return new Vector2(1, 0);
+    }
+
+    static left () : Vector2 {
+        return new Vector2(-1, 0);
     }
 }

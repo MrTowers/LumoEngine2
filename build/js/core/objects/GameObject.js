@@ -3,6 +3,7 @@
  * www.github/MrTowers
  */
 import { LUMO_ENGINE2 } from "../../LumoEngine2.js";
+import { uniqid } from "../functions/uniqid.js";
 import { LUMO_settings } from "../LUMO_settings.js";
 import { Transform } from "../math/Transform.js";
 import { Component } from "./Component.js";
@@ -11,6 +12,8 @@ export class GameObject {
         this.components = [];
         this.transform = new Transform();
         this.tag = tag;
+        this.uniqid = uniqid();
+        this.spawned = false;
     }
     addComponent(component) {
         component.gameObject = this;
@@ -47,14 +50,20 @@ export class GameObject {
     setPosition(location) {
         this.transform.position = location;
     }
-    addPosition(v) {
-        this.transform.position = this.transform.position.add(v);
-    }
     getRotation() {
         return this.transform.rotation;
     }
     setRotation(rotation) {
         this.transform.rotation = rotation;
+    }
+    getZ() {
+        return this.transform.z;
+    }
+    setZ(value) {
+        this.transform.z = value;
+        if (this.spawned) {
+            LUMO_ENGINE2.recalculateZ();
+        }
     }
     render(ctx, canvas) {
         for (let i in this.components) {
