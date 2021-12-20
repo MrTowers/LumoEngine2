@@ -55,7 +55,7 @@ export class Engine {
         this.input = new Input();
         this.timescale = 1;
 
-        this.version = "0.24a";
+        this.version = "0.30a";
 
         this.timepassed = 0;
     }

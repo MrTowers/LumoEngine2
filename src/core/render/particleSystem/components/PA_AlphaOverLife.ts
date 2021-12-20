@@ -17,6 +17,9 @@ export class PA_AlphaOverLife extends ParticleComponent {
     update () {
         this.animation.setTime(this.particle.life / this.particle.startlife);
         this.particle.alpha = this.animation.value;
+        if (isNaN(this.particle.alpha)) {
+            this.particle.alpha = 0;
+        }
     }
 
     clone (particle: Particle) {
@@ -25,6 +28,6 @@ export class PA_AlphaOverLife extends ParticleComponent {
 
     init() {
         this.animation.setTime(this.particle.life / this.particle.startlife);
-        this.particle.alpha = this.animation.value;
+        this.particle.alpha = 0;
     }
 }
