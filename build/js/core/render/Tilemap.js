@@ -7,9 +7,9 @@ import { Vector2 } from "../math/Vector2.js";
 import { Component } from "../objects/Component.js";
 import { Camera } from "./Camera.js";
 export class Tilemap extends Component {
-    constructor(image) {
+    constructor(imageName) {
         super();
-        this.image = LUMO_ENGINE2.textures[image];
+        this.image = LUMO_ENGINE2.textures[imageName];
         this.sizeX = 20;
         this.sizeY = 20;
         this.display = 0;

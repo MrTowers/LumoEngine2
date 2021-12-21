@@ -17,9 +17,9 @@ export class Tilemap extends Component {
     alpha: number;
     offset: Vector2;
 
-    constructor (image: string) {
+    constructor (imageName: string) {
         super();
-        this.image = LUMO_ENGINE2.textures[image];
+        this.image = LUMO_ENGINE2.textures[imageName];
         this.sizeX = 20;
         this.sizeY = 20;
         this.display = 0;
