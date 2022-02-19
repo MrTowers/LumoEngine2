@@ -1,47 +1,38 @@
-import { Input } from "../core/control/Input.js";
-import { screenToWorldLocation } from "../core/functions/screenToWorldLocation.js";
 import { spawnGameObject } from "../core/functions/spawnGameObject.js";
 import { Load } from "../core/Load.js";
 import { Vector2 } from "../core/math/Vector2.js";
-import { Component } from "../core/objects/Component.js";
 import { GameObject } from "../core/objects/GameObject.js";
-import { PA_AlphaOverLife } from "../core/render/particleSystem/components/PA_AlphaOverLife.js";
-import { PA_InitialVelocity } from "../core/render/particleSystem/components/PA_InitialVelocity.js";
-import { PA_Orbit } from "../core/render/particleSystem/components/PA_Orbit.js";
-import { Particle } from "../core/render/particleSystem/Particle.js";
-import { ParticleEmitter } from "../core/render/particleSystem/ParticleEmitter.js";
-import { ParticleSystem } from "../core/render/particleSystem/ParticleSystem.js";
+import { LightSource } from "../core/render/effects/ShadingRenderer/Components/LightSource.js";
+import { ShadingRenderer } from "../core/render/effects/ShadingRenderer/ShadingRenderer.js";
+import { Sprite } from "../core/render/Sprite.js";
+import { Gracz } from "./Gracz.js";
 
 export function main() {
-    Load.addTextureToPreload("test.png", "test");
-    Load.addTextureToPreload("test2.png", "test2");
+    Load.addTextureToPreload("./robotnik.png", "gracz");
+    Load.addTextureToPreload("./traawa.png", "grass");
     Load.startTexturePreload(() => {
         startGame();
-    })
+    });
 }
 
-function startGame () {
-    let x = new GameObject();
-    let part = new Particle("test2", 20, "tilemap", new Vector2(612 / 4, 434 / 2));
-    part.display = 0;
-    part.transform.scale = new Vector2(0.5, 0.5);
-    part.tilemapAnimSpeed = 10;
-    part.components = [
-        new PA_AlphaOverLife(part),
-        new PA_InitialVelocity(part, new Vector2(-1, 0), new Vector2(1, -3))
-    ]
-    let sys = new ParticleSystem();
-    let em = new ParticleEmitter(part, sys, 0, 5);
-
-    sys.addEmitter(em);
-    x.addComponent(sys);
-
-    spawnGameObject(x);
-
-    x.update = () => {
-        if (Input.getMouseButton("left")) {
-            x.setPosition(screenToWorldLocation(Input.getMousePosition()));
-            sys.burst();
+function startGame() {
+    for (let x = -32; x < 32; x++) {
+        for (let y = -32; y < 32; y++) {
+            let g = new GameObject();
+            let s = new Sprite("grass");
+            s.setSize(50);
+            g.addComponent(s);
+            spawnGameObject(g, new Vector2(x * 50, y * 50));
         }
     }
+
+    //spawning player
+    spawnGameObject(new Gracz());
+    spawnGameObject(new ShadingRenderer(0.5));
+    let lightSource = new LightSource(200);
+    lightSource.spawn();
+
+    setInterval(() => {
+        lightSource.position.x += 1;
+    }, 0);
 }
