@@ -11,7 +11,7 @@ export class ShadingRendererScript extends Component {
             for (let y = 0; y < canvas.height; y += SHADOWTILESIZE) {
                 ctx.save();
                 ctx.fillStyle = "black";
-                ctx.globalAlpha = this._calculateLight(new Vector2(x, y));
+                ctx.filter = `brightness(${this._calculateLight(new Vector2(x, y))})`;
                 ctx.fillRect(x, y, SHADOWTILESIZE, SHADOWTILESIZE);
                 ctx.restore();
             }
